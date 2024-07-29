@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+        .lb-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1002;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+        <button id="language-btn" onclick="switchLanguage('si')">සිංහල</button>
+    </header>
+    <section class="gallery-hero hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h1 data-en="Gallery" data-si="ගැලරිය">Gallery</h1>
+            <p data-en="Explore the memorable moments captured during our events." data-si="අපගේ සිදුවීම්වල දෝරෙගත් වැදගත් මොහොතවල් විමසන්න.">Explore the memorable moments captured during our events.</p>
+        </div>
+    </section>
+    <section class="gallery-content">
+        <div class="container">
+            <h2 data-en="Wicket Warrior Cup" data-si="විකට් වෝරියර් කප්">Wicket Warrior Cup</h2>
+            <div class="gallery-grid">
+                <!-- Images from Wicket Warrior Cup -->
+                <a href="images/wicket_warrior_cup/image1.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 1">
+                    <img src="images/wicket_warrior_cup/image1.jpg" alt="Wicket Warrior Cup 1">
+                </a>
+                <a href="images/wicket_warrior_cup/image2.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 2">
+                    <img src="images/wicket_warrior_cup/image2.jpg" alt="Wicket Warrior Cup 2">
+                </a>
+                <a href="images/wicket_warrior_cup/image3.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 3">
+                    <img src="images/wicket_warrior_cup/image3.jpg" alt="Wicket Warrior Cup 3">
+                </a>
+                <a href="images/wicket_warrior_cup/image4.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 4">
+                    <img src="images/wicket_warrior_cup/image4.jpg" alt="Wicket Warrior Cup 4">
+                </a>
+                <a href="images/wicket_warrior_cup/image5.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 5">
+                    <img src="images/wicket_warrior_cup/image5.jpg" alt="Wicket Warrior Cup 5">
+                </a>
+                <a href="images/wicket_warrior_cup/image6.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 6">
+                    <img src="images/wicket_warrior_cup/image6.jpg" alt="Wicket Warrior Cup 6">
+                </a>
+                <a href="images/wicket_warrior_cup/image7.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 7">
+                    <img src="images/wicket_warrior_cup/image7.jpg" alt="Wicket Warrior Cup 7">
+                </a>
+                <a href="images/wicket_warrior_cup/image8.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 8">
+                    <img src="images/wicket_warrior_cup/image8.jpg" alt="Wicket Warrior Cup 8">
+                </a>
+                <a href="images/wicket_warrior_cup/image9.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 9">
+                    <img src="images/wicket_warrior_cup/image9.jpg" alt="Wicket Warrior Cup 9">
+                </a>
+                <a href="images/wicket_warrior_cup/image10.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 10">
+                    <img src="images/wicket_warrior_cup/image10.jpg" alt="Wicket Warrior Cup 10">
+                </a>
+                <a href="images/wicket_warrior_cup/image11.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 11">
+                    <img src="images/wicket_warrior_cup/image11.jpg" alt="Wicket Warrior Cup 11">
+                </a>
+                <a href="images/wicket_warrior_cup/image12.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 12">
+                    <img src="images/wicket_warrior_cup/image12.jpg" alt="Wicket Warrior Cup 12">
+                </a>
+                <a href="images/wicket_warrior_cup/image13.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 13">
+                    <img src="images/wicket_warrior_cup/image13.jpg" alt="Wicket Warrior Cup 13">
+                </a>
+                <a href="images/wicket_warrior_cup/image14.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 14">
+                    <img src="images/wicket_warrior_cup/image14.jpg" alt="Wicket Warrior Cup 14">
+                </a>
+                <a href="images/wicket_warrior_cup/image15.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 15">
+                    <img src="images/wicket_warrior_cup/image15.jpg" alt="Wicket Warrior Cup 15">
+                </a>
+                <a href="images/wicket_warrior_cup/image16.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 16">
+                    <img src="images/wicket_warrior_cup/image16.jpg" alt="Wicket Warrior Cup 16">
+                </a>
+                <a href="images/wicket_warrior_cup/image17.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 17">
+                    <img src="images/wicket_warrior_cup/image17.jpg" alt="Wicket Warrior Cup 17">
+                </a>
+                <a href="images/wicket_warrior_cup/image18.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 18">
+                    <img src="images/wicket_warrior_cup/image18.jpg" alt="Wicket Warrior Cup 18">
+                </a>
+                <a href="images/wicket_warrior_cup/image19.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 19">
+                    <img src="images/wicket_warrior_cup/image19.jpg" alt="Wicket Warrior Cup 19">
+                </a>
+                <a href="images/wicket_warrior_cup/image20.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 20">
+                    <img src="images/wicket_warrior_cup/image20.jpg" alt="Wicket Warrior Cup 20">
+                </a>
+                <a href="images/wicket_warrior_cup/image21.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 21">
+                    <img src="images/wicket_warrior_cup/image21.jpg" alt="Wicket Warrior Cup 21">
+                </a>
+                <a href="images/wicket_warrior_cup/image22.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 22">
+                    <img src="images/wicket_warrior_cup/image22.jpg" alt="Wicket Warrior Cup 22">
+                </a>
+                <a href="images/wicket_warrior_cup/image23.jpg" data-lightbox="wicket_warrior_cup" data-title="Wicket Warrior Cup 23">
+                    <img src="images/wicket_warrior_cup/image23.jpg" alt="Wicket Warrior Cup 23">
+                </a>
+            </div>
+            
+            <h2 data-en="Anniversary" data-si="වාර්ෂික උළෙල">Anniversary</h2>
+            <div class="gallery-grid">
+                <!-- Images from Anniversary -->
+                <a href="images/anniversary/image1.jpg" data-lightbox="anniversary" data-title="Anniversary 1">
+                    <img src="images/anniversary/image1.jpg" alt="Anniversary 1">
+                </a>
+                <a href="images/anniversary/image2.jpg" data-lightbox="anniversary" data-title="Anniversary 2">
+                    <img src="images/anniversary/image2.jpg" alt="Anniversary 2">
+                </a>
+                <a href="images/anniversary/image3.jpg" data-lightbox="anniversary" data-title="Anniversary 3">
+                    <img src="images/anniversary/image3.jpg" alt="Anniversary 3">
+                </a>
+                <a href="images/anniversary/image4.jpg" data-lightbox="anniversary" data-title="Anniversary 4">
+                    <img src="images/anniversary/image4.jpg" alt="Anniversary 4">
+                </a>
+                <a href="images/anniversary/image5.jpg" data-lightbox="anniversary" data-title="Anniversary 5">
+                    <img src="images/anniversary/image5.jpg" alt="Anniversary 5">
+                </a>
+                <a href="images/anniversary/image6.jpg" data-lightbox="anniversary" data-title="Anniversary 6">
+                    <img src="images/anniversary/image6.jpg" alt="Anniversary 6">
+                </a>
+                <a href="images/anniversary/image7.jpg" data-lightbox="anniversary" data-title="Anniversary 7">
+                    <img src="images/anniversary/image7.jpg" alt="Anniversary 7">
+                </a>
+                <a href="images/anniversary/image8.jpg" data-lightbox="anniversary" data-title="Anniversary 8">
+                    <img src="images/anniversary/image8.jpg" alt="Anniversary 8">
+                </a>
+                <a href="images/anniversary/image9.jpg" data-lightbox="anniversary" data-title="Anniversary 9">
+                    <img src="images/anniversary/image9.jpg" alt="Anniversary 9">
+                </a>
+                <a href="images/anniversary/image10.jpg" data-lightbox="anniversary" data-title="Anniversary 10">
+                    <img src="images/anniversary/image10.jpg" alt="Anniversary 10">
+                </a>
+                <a href="images/anniversary/image11.jpg" data-lightbox="anniversary" data-title="Anniversary 11">
+                    <img src="images/anniversary/image11.jpg" alt="Anniversary 11">
+                </a>
+                <a href="images/anniversary/image12.jpg" data-lightbox="anniversary" data-title="Anniversary 12">
+                    <img src="images/anniversary/image12.jpg" alt="Anniversary 12">
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Vidumina DP IT Campus. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'albumLabel': "Image %1 of %2",
+            'fadeDuration': 300,
+            'imageFadeDuration': 300,
+            'showImageNumberLabel': false,
+            'alwaysShowNavOnTouchDevices': true
+        });
+
+        // Add close button functionality
+        document.addEventListener("click", function(event) {
+            if (event.target.matches(".lb-close")) {
+                lightbox.close();
+            }
+        });
+
+        document.addEventListener('lightbox-start', function() {
+            const closeButton = document.createElement('button');
+            closeButton.innerHTML = '&times;';
+            closeButton.className = 'lb-close';
+            document.querySelector('.lb-container').appendChild(closeButton);
+        });
+    </script>
+</body>
+</html>

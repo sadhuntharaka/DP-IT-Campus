@@ -1,0 +1,624 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f9f9f9;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #fa0101, #a00404);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 50px;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: white;
+    transition: width 0.2s ease, right 0.2s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    right: 0;
+}
+
+nav ul li a:hover {
+    color: #fffefe;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.4s;
+}
+
+.highlight {
+    font-size: 1.5em;
+    color: #fdfdfd;
+    font-weight: bold;
+}
+
+/* Hero section styles */
+.hero {
+    position: relative;
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Merriweather', serif;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, rgba(248, 2, 2, 0.932), rgba(110, 2, 2, 0.301));
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 5em;
+    margin: 0 0 20px;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.hero p {
+    font-size: 2em;
+    margin: 0 0 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #ff6f00;
+    transform: translateY(-3px);
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.5em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: #ff6f00;
+    transform: translateY(-3px);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 50px;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down a {
+    color: white;
+    font-size: 2em;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+.about-hero, .courses-hero, .announcements-hero, .contact-hero, .projects-hero, .gallery-hero {
+    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, rgba(248, 2, 2, 0.932), rgba(110, 2, 2, 0.301));
+    z-index: 1;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero .hero-text, .courses-hero .hero-text, .announcements-hero .hero-text, .contact-hero .hero-text, .projects-hero .hero-text, .gallery-hero .hero-text {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.about-content, .courses-content, .announcements-content, .contact-content, .projects-content, .gallery-content {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ff00008f, #ff0000);
+    color: white;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content .container, .courses-content .container, .announcements-content .container, .contact-content .container, .projects-content .container, .gallery-content .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2, .courses-content h2, .announcements-content h2, .contact-content h2, .projects-content h2, .gallery-content h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.about-content p, .courses-content p, .announcements-content p, .contact-content p, .projects-content p, .gallery-content p {
+    font-size: 1.9em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-item, .course-item, .announcement-item, .contact-item, .project-item, .gallery-item {
+    background-color: white;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    position: relative;
+    display: block;
+}
+
+.about-item:hover, .course-item:hover, .announcement-item:hover, .contact-item:hover, .project-item:hover, .gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-item h3, .course-item h3, .announcement-item h3, .contact-item h3, .project-item h3, .gallery-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #d32f2f;
+}
+
+.about-item p, .course-item p, .announcement-item p, .contact-item p, .project-item p, .gallery-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.about-icon, .course-icon, .announcement-icon, .contact-icon, .project-icon, .gallery-icon {
+    font-size: 2.5em;
+    color: #ff6f00;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    background: white;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.course-item {
+    background-color: rgba(4, 105, 67, 0.637);
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    position: relative;
+    display: block;
+}
+
+.course-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.course-item h3 {
+    font-size: 2.3em;
+    margin-bottom: 10px;
+    color: #f6f3f8;
+}
+
+.course-item p {
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: #d6caca;
+}
+
+.course-item .duration {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.course-item .details {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Staff and Prefects Section */
+.staff, .prefects {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.staff h2, .prefects h2 {
+    font-size: 3em;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.staff .staff-member, .prefects .prefect {
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ff6f00;
+}
+
+.staff .staff-member img {
+    border-radius: 30%;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+ .prefects .prefect img {
+    border-radius: 30%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.staff-member h3 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 10px;
+}
+.staff-member p {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Prefects Section */
+.prefects .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prefect-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.prefect {
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px; /* Adjust as needed */
+}
+
+.prefect.highlight {
+    border: 2px solid #ff6f00;
+}
+
+.prefect img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.prefect h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.prefect p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Specific styles for the first row of prefects */
+.prefect-row:first-of-type {
+    justify-content: space-around;
+}
+
+.prefect-row:nth-of-type(n+2) {
+    justify-content: space-between;
+}
+
+.prefect-row:nth-of-type(n+2) .prefect {
+    width: calc(33.333% - 40px); /* 3 prefects per row with some spacing */
+}
+
+/* Gallery styles */
+.gallery-content {
+    padding: 40px 20px;
+    text-align: center;
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-content .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #d32f2f;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #ff6f00;
+    padding: 1px;
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.lb-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+/* Media Queries for Mobile View */
+@media only screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #d32f2f;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .about-item, .course-item, .announcement-item, .contact-item, .project-item, .gallery-item {
+        width: 100%;
+    }
+
+    .course-details {
+        width: 100%;
+    }
+
+    /* Adjust the number of prefects per row on smaller screens */
+    .prefect-row:nth-of-type(n+2) .prefect {
+        width: calc(50% - 40px); /* 2 prefects per row with some spacing */
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .prefect-row:nth-of-type(n+2) .prefect {
+        width: 100%; /* 1 prefect per row */
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* course button */
+.course-button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.course-button:hover {
+    background-color: #4f7191;
+    transform: translateY(-3px);
+}
+
+/* Responsive styles for .courses-content */
+.courses-content .container {
+    padding: 5px;
+}
+
+.course-item {
+    padding: 5px;
+}
+
+.course-item h3 {
+    font-size: 2em;
+}
+
+.course-item p {
+    font-size: 1.2em;
+}
+
+.course-button {
+    margin-top: 10px;
+}
